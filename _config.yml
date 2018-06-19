@@ -1,0 +1,31 @@
+title: Shreyas Kowshik
+description: Personal website and blog of shreyas-kowshik
+
+url: http://shreyas-kowshik.github.io/
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: blog/:title/
+
+markdown: kramdown
+highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+
+navigation:
+ - title: Home
+   url: /index.html
+ - title: About
+   url: /about
+ - title: Contact
+   url: /contact
+
+social:
+   github: shreyas-kowshik
+   twitter: shreyas-kowshik
+   facebook: shreyas.kowshik
+   email: shreyaskowshik@gmail.com
+   linkedin: shreyas-kowshik-115716155
+
+footer-links:
+  linkedin: shreyas-kowshik-115716155
+# google_analytics: "UA-58263416-1"

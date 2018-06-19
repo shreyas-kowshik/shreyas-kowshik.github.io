@@ -1,0 +1,34 @@
+<!-- Icons taken from : https://icons8.com/icon/set/gmail/metro -->
+
+<div class="footer">
+   <div class="container">
+      <p class="copy">&copy; {{ site.time | date: '%Y' }} <a href="http://brianmaierjr.com">Brian Maier Jr.</a> Powered by <a href="http://jekyllrb.com">Jekyll</a></p>
+
+      <div class="footer-links"> 
+         <ul class="noList"> 
+            {% if site.social.facebook %}
+            <li><a href="https://www.facebook.com/{{ site.social.facebook }}" target="_blank">
+                  <img src="{{ '/assets/img/facebook.png' | prepend: site.baseurl }}" align="right" alt="">
+            </a></li>
+            {% endif %}
+            {% if site.social.github %}
+            <li><a href="https://github.com/{{ site.social.github }}"  target="_blank">
+                   <img src="{{ '/assets/img/github.png' | prepend: site.baseurl }}" align="right" alt="">
+            </a></li>
+            {% endif %} 
+            {% if site.social.email %}
+            <li><a href="mailto:{{ site.social.email }}" target="_blank">
+                  <img src="{{ '/assets/img/mail.png' | prepend: site.baseurl }}" align="right" alt="">
+            </a></li>
+            {% endif %}
+
+            {% if site.social.linkedin %}
+            <li><a href="https://www.linkedin.com/in/{{site.social.linkedin}}" target="_blank">
+                  <img src="{{ '/assets/img/linkedin.png' | prepend: site.baseurl }}" align="right" alt="">
+            </a></li>
+            {% endif %}
+         </ul>
+      </div>
+   </div>
+</div><!-- end .footer -->
+
