@@ -8,6 +8,11 @@ tags: [firstpost,machine-learning]
 Finally, after a nervous month of anticipation, GSoC results are finally out, and guess what, I have been selected.
 Here starts the journey of a summer long session of coding and a great oppurtunity to contribute to the open source community.
 
+
+![selection](/blog/figs/2019-5-9/selection.png) 
+My project is selected under `The Julia Language` in `Flux.jl`. Flux is basically the machine learning spearhead of julia.
+
+
 I will be working on making generative models such as cycleGAN and pix2pix for multi-modal image to image translation.
 These will be trained and made available for everyone to use as a part of `Metalhead.jl`.
 The next phase will involve reinforcement learning algorithms for continuous control like Trust Region Policy Optimization and
