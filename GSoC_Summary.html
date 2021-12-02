@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://shreyas-kowshik.github.io/blog/2019/08/18/summary.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>GSoC Summary</title>
+
+  <meta name="author" content="Shreyas Kowshik">
+
+  
+  <meta name="description" content="A look back into the summer...">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Shreyas Kowshik - Shreyas Kowshik&#39;s personal web page" href="https://shreyas-kowshik.github.io/feed.xml">
+
+<!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+  
+  
+    
+      <link rel="stylesheet" href="./GSoC_Summary_files/font-awesome.min.css">
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="./GSoC_Summary_files/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="./GSoC_Summary_files/main.css">
+    
+  
+
+  
+  
+    
+      <link rel="stylesheet" href="./GSoC_Summary_files/css">
+    
+      <link rel="stylesheet" href="./GSoC_Summary_files/css(1)">
+    
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  <!-- Facebook OpenGraph tags -->
+  <meta property="og:title" content="GSoC Summary">
+  <meta property="og:type" content="website">
+
+  
+  <meta property="og:description" content="A look back into the summer...">
+  
+
+  
+  <meta property="og:url" content="http://shreyas-kowshik.github.io/blog/2019/08/18/summary.html">
+  
+
+  
+  <meta property="og:image" content="http://shreyas-kowshik.github.io/images/shreyas.jpg">
+  
+
+  <!-- Twitter tags -->
+  <meta name="twitter:card" content="summary">
+
+      <!-- Scripts for ggvis from http://ggvis.rstudio.com/0.1/interactivity.html-->
+  <!-- ggvis stuff -->
+  <script async="" src="./GSoC_Summary_files/analytics.js"></script><script src="./GSoC_Summary_files/jquery-1.11.0.min.js"></script>
+  <script src="./GSoC_Summary_files/jquery-ui-1.10.4.custom.min.js"></script>
+  <script charset="utf-8" src="./GSoC_Summary_files/d3.min.js"></script>
+  <script src="./GSoC_Summary_files/vega.min.js"></script>
+  <script src="./GSoC_Summary_files/QuadTree.js"></script>
+  <script src="./GSoC_Summary_files/lodash.min.js"></script>
+  <script>var lodash = _.noConflict();</script>
+  <script src="./GSoC_Summary_files/ggvis.js"></script>
+  <link rel="stylesheet" type="text/css" href="./GSoC_Summary_files/jquery-ui-1.10.4.custom.min.css">
+  <link rel="stylesheet" type="text/css" href="./GSoC_Summary_files/ggvis.css">
+  <!-- end of ggvis scripts-->
+
+
+<script type="text/javascript" async="" src="https://.disqus.com/embed.js"></script></head>
+
+
+  <body data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="">
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://shreyas-kowshik.github.io/">Shreyas Kowshik</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+	    
+        <li>
+		  <a href=""></a>
+		</li>
+		
+        <li>
+		  <a href=""></a>
+		</li>
+		
+        <li>
+		  <a href=""></a>
+		</li>
+		
+      </ul>
+    </div>
+	
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="index.html">
+	      <img class="avatar-img" src="./GSoC_Summary_files/shreyas.jpg">
+		</a>
+	  </div>
+	</div>
+	
+	
+  </div>
+</nav>  
+
+    <div role="main" class="container main-content">
+      <header class="header-post">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-heading">
+        <h1>GSoC Summary</h1>
+        
+        <h2 class="post-subheading">A look back into the summer...</h2>
+        
+        <span class="post-meta">Posted on August 18, 2019</span>
+      </div>
+     </div>
+  </div>
+</header>
+
+<article>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <p>The GSoC coding period is coming to an end and it is time to reflect upon what all has been achieved, what could’nt be done and what can be done more in future. My project was aimed at enriching the model zoo of <code class="highlighter-rouge">Flux.jl</code> by making additions in the form of gans, reinforcement learning agents and an image-captioning network. Precisely the following models have been implemented as a part of the coding period :</p>
+
+<ol>
+  <li>CycleGAN</li>
+  <li>pix2pix</li>
+  <li>SRGAN</li>
+  <li>Proximal Policy Optimization</li>
+  <li>Trust Region Policy Optimization</li>
+  <li>Deep Recurrent Q Learning</li>
+  <li>Neural Image Captioning</li>
+</ol>
+
+<p>These were exactly the part of the proposal as well. Let’s go one by one over explaining the work, analysing what has been achieved and what was lacking in each period.</p>
+
+<h2 id="the-generative-adversarial-networks">The Generative Adversarial Networks</h2>
+
+<p>Clubbed under these are the models <code class="highlighter-rouge">CycleGAN</code>, <code class="highlighter-rouge">pix2pix</code> and <code class="highlighter-rouge">Super-Resolution-GAN</code>. These have been added to model-zoo in the following PR : <a href="https://github.com/FluxML/model-zoo/pull/157">#157</a></p>
+
+<p><code class="highlighter-rouge">CycleGAN</code> and <code class="highlighter-rouge">pix2pix</code> are multi-modal image-to-image translation networks. <code class="highlighter-rouge">pix2pix</code> learns the translation in one direction at a time during training and works with paired labels. Some cool instances of it’s working are colorising sketches or generating buildings from segmentation maps. <code class="highlighter-rouge">CycleGAN</code> learns a combined translation between both the domains during training. The improvement aided here is that it does not need any paired labels. <code class="highlighter-rouge">pix2pix</code> has a generator and a discriminator and apart from normal adversarial loss, works with a <code class="highlighter-rouge">L1-constraint</code> to improve the quality of the images. <code class="highlighter-rouge">CycleGAN</code> has a generator and a discriminator for each of the domains. The complete tutorial was covered in a previous post and can be found <a href="https://shreyas-kowshik.github.io/blog/2019/05/23/community-bonding-period.html">here</a>.</p>
+
+<p><code class="highlighter-rouge">Super-Resolution-GAN</code> is another cool application of GANs. It basically takes a downgraded version of a high-quality image and learns to map it back to the high resolution. It uses an interesting <code class="highlighter-rouge">Pixel-Shuffle</code> layer which permutes a feature map along channels and resizes it to obtain an upsampled version of the output. As this layer was not a part of <code class="highlighter-rouge">Flux</code>, it was used manually. The generator extracts the features from the low-resolution image and uses the pixel-shuffle operation to obtain the high-resolution output.</p>
+
+<p>
+    <img src="./GSoC_Summary_files/pix2pix_arch.png" alt="pix2pix_arch">
+    <br>
+    </p><center><em>The pix2pix architecture (Image taken from the paper) </em></center>
+<p></p>
+
+<p>
+    <img src="./GSoC_Summary_files/cyclegan_arch.jpg" alt="cyclegan_arch" width="700">
+    <br>
+    </p><center><em>The CycleGAN architecture</em></center>
+<p></p>
+
+<p>
+    <img src="./GSoC_Summary_files/srgan_arch.png" alt="srgan_arch" width="700">
+    <br>
+    </p><center><em>The SRGAN architecture (Image taken from the paper) </em></center>
+<p></p>
+
+<h3 id="sample-results">Sample Results</h3>
+
+<p>
+    <img src="./GSoC_Summary_files/pix2pix_1.png" alt="pix2pix_1">
+    <br>
+    <em>Sample output of `pix2pix` trained on `facades` dataset</em>
+</p>
+
+<p>
+    <img src="./GSoC_Summary_files/pix2pix_2.png" alt="pix2pix_2">
+    <br>
+    <em>Sample output of `pix2pix` trained on `facades` dataset</em>
+</p>
+
+<h3 id="challenges-faced">Challenges faced</h3>
+
+<p>During the initial phase of training, the network was taking too long to train when compared with the pytorch and tensorflow counterparts. As discussed with my mentors, the suggested hack was to integrate <a href="https://github.com/FluxML/Flux.jl/pull/335">#335</a> to the speedup. But due to time constraints and a plethora of work left to do, the problem was circumvented by making the networks smaller. The new networks are known to give decent results on other frameworks and so the reduction could be justified. The final status of training was that the models were overfitting in case of <code class="highlighter-rouge">pix2pix</code> and manually tuning hyperparameters was’nt that successful. So all in all the models have’nt been trained and tuning of hyper-parameters is still left.</p>
+
+<h3 id="what-has-been-achieved">What has been achieved</h3>
+<ul>
+  <li>Implemented the models and <a href="https://github.com/FluxML/model-zoo/pull/157">PR</a> sent</li>
+  <li><code class="highlighter-rouge">Pixel-Shuffle</code> layer [<a href="https://github.com/FluxML/NNlib.jl/pull/112">#112</a>]</li>
+</ul>
+
+<h3 id="what-hasnt-been-achieved">What has’nt been achieved</h3>
+<ul>
+  <li>Training the models successfully</li>
+</ul>
+
+<h3 id="future-work">Future Work</h3>
+<ul>
+  <li>Tune the hyper-parameters and try training on a small dataset first</li>
+  <li>Experiment with architectures from stable implementations in other libraries and use the hyperparameters therein</li>
+</ul>
+
+<h2 id="the-reinforcement-learning-baselines">The Reinforcement Learning Baselines</h2>
+
+<p>As a part of my proposal, I had to implement <code class="highlighter-rouge">Trust Region Policy Optimization</code>, <code class="highlighter-rouge">Proximal Policy Optimization</code> and <code class="highlighter-rouge">Deep Recurrent Q-Networks</code>. This was the part that most appealed to me, because the consequences were two fold :</p>
+<ul>
+  <li>There were quite a few networks as a part of model zoo for computer-vision models, but not many diverse models in terms of reinforcement learning.</li>
+  <li>RL has shifted focus to new state-of-the art models for policy gradients like <code class="highlighter-rouge">TRPO</code> and <code class="highlighter-rouge">PPO</code> and adding them would attract many people to do RL in julia.</li>
+</ul>
+
+<p>Realising that a general API was required now for the policy gradient methods which <code class="highlighter-rouge">TRPO</code> and <code class="highlighter-rouge">PPO</code> heavily share, I decided to create the package along the lines of the <code class="highlighter-rouge">openai-baselines</code>.</p>
+
+<p>The code is maintained in the <a href="https://github.com/shreyas-kowshik/RL-baselines.jl">this</a> repository. The code for the recurrent-q-network can be found in the <code class="highlighter-rouge">drqn</code> branch.</p>
+
+<p>A PR regarding the same has been added <a href="https://github.com/FluxML/model-zoo/pull/158">here</a>.</p>
+
+<h3 id="a-peek-into-the-api">A Peek Into The API</h3>
+
+<p>Before talking about the models, let’s look at what the structure of the package is like.</p>
+
+<p>In general, with the type of environments available currently in <code class="highlighter-rouge">Gym.jl</code>, the action space can either be <code class="highlighter-rouge">Discrete</code> or <code class="highlighter-rouge">Continuous</code>. We define a <code class="highlighter-rouge">CategoricalPolicy</code> structure to handle the <code class="highlighter-rouge">Discrete</code> action spaces and <code class="highlighter-rouge">DiagonalGaussianPolicy</code> to handle <code class="highlighter-rouge">Continuous</code> action spaces. The functions for <code class="highlighter-rouge">entropy</code>, <code class="highlighter-rouge">kl-divergence</code>, etc. are a part of each policy and are defined in <code class="highlighter-rouge">policy.jl</code> in the <code class="highlighter-rouge">common/</code> directory.</p>
+
+<p>In order to create a policy, an environment wrapper instance is to be created. It takes in just the environment name and accordingly obtains all the information such as <code class="highlighter-rouge">STATE_SIZE</code> and <code class="highlighter-rouge">ACTION_SIZE</code> from the envionment. This is used as an abstraction for initializing the policy.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Define environment wrapper instance
+env_wrap = EnvWrap(ENV_NAME)
+
+# Define policy 
+# The policy can currently either be `Catrgorical` or `DiagonalGaussian`
+policy = get_policy(env_wrap) # Returns the policy based on the environment type
+
+next_state = action(policy,state) # Take an action in current state
+
+# Get log-probability of current action
+logp = log_prob(policy,states,actions)
+
+# Extract out the neural network parameters for the policy
+policy_params = get_policy_params(policy)
+value_params = get_value_params(policy)
+
+# I/O
+save_policy(policy,"PATH_TO_SAVE")
+policy = load_policy(env_wrap,"LOAD_PATH")
+</code></pre></div></div>
+
+<p>Similarly other utilities in terms of <code class="highlighter-rouge">kl-divergence</code> and <code class="highlighter-rouge">entropy</code> are defined in <code class="highlighter-rouge">policy.jl</code>.</p>
+
+<p>This is done to abstract out the policy definition to allow for easy extensibility of the code in future with newer environments and models. We also define a <code class="highlighter-rouge">Buffer</code> structure to log different variables and their values. For both <code class="highlighter-rouge">trpo</code> and <code class="highlighter-rouge">ppo</code> a file called <code class="highlighter-rouge">rollout.jl</code> handles all code for parallelly running agents, collecting trajectories of experiences and processing the trajectories to extract out all relevant information from them. The basic structure being covered, let us understand about the model implementations.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eb = Buffer() # Create an episode buffer
+# This will be used to log different variables as time progresses
+register(eb,"states")
+register(eb,"actions")
+register(eb,"rewards")
+register(eb,"next_states")
+register(eb,"dones")
+register(eb,"returns")
+register(eb,"advantages")
+register(eb,"log_probs")
+register(eb,"kl_params")
+
+# Clear and reset all variables in buffer
+clear(eb)
+
+# Access the data stored for a particular key in the buffer 
+eb.exp_dict["key"] = ... # You can directly modify this variable
+# OR
+add(eb,"rewards",1.0) # Assuming the value for the key is an array, this will push the value into it
+</code></pre></div></div>
+
+<p>As defined in <code class="highlighter-rouge">rollout.jl</code> :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function collect_and_process_rollouts(policy,episode_buffer::Buffer,num_steps::Int,stats_buffer::Buffer)
+"""
+This function collects rollouts along multiple parallel actors and processes them
+It populates the values in the different variables of the `episode_buffer`
+
+episode_buffer : Buffer to store collect and store information along trajectories
+num_steps : Number of timesteps to collect in a trajectory
+stats_buffer : To log variables for analysis
+"""
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">TRPO</code> tries to solve the problem of policy updates by not letting the policy change by a large margin in each step and at the same time theoretically giving a garuntee on the improvement in the total expected return at each time step. It does this by solving the constrained optimization problem by making approximations to the contraint and a formulated surrogate loss function. The implementation involves using some nifty details like <code class="highlighter-rouge">Hessian-Vector-Product</code> computation and optimization using <code class="highlighter-rouge">Conjugate-Gradients</code>. It took quite a lot of time to digest these concepts and after reading throgh stable pieces of code and gluing it all up, the model was built in pure julia.</p>
+
+<p><code class="highlighter-rouge">PPO</code> sort of simplifies the objective of <code class="highlighter-rouge">TRPO</code> by allowing for violation of the <code class="highlighter-rouge">KL-Divergence</code> constraint, but giving a much simpler policy update. It is easier to code up and in practice does quite well in comparision fo <code class="highlighter-rouge">TRPO</code>.</p>
+
+<p>With the above API in place, the groud-up implementation of <code class="highlighter-rouge">PPO</code> is as simple as :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Clear episode buffer
+clear(episode_buffer)
+
+# Collect information along trajectories
+collect_and_process_rollouts(policy,episode_buffer,EPISODE_LENGTH,stats_buffer)
+
+# Extract mini-batch information
+i = minibatch_idx # Stores the batch indices for a particular mini-batch
+mb_states = episode_buffer.exp_dict["states"][:,i] 
+mb_actions = episode_buffer.exp_dict["actions"][:,i] 
+mb_advantages = episode_buffer.exp_dict["advantages"][:,i] 
+mb_returns = episode_buffer.exp_dict["returns"][:,i] 
+mb_log_probs = episode_buffer.exp_dict["log_probs"][:,i]
+mb_kl_vars = episode_buffer.exp_dict["kl_params"][i]
+
+# Update the policy and value function parameters
+ppo_update(policy,mb_states,mb_actions,mb_advantages,mb_returns,mb_log_probs,mb_kl_vars)
+
+# Save the policy
+save_policy(policy,"PATH_TO_SAVE")
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">Deep-Recurrent-Q-Networks</code> is an extension of the work done last year by <b>Tejan Karmali [ @tejank10 ]</b>. The idea was basically to add a <code class="highlighter-rouge">LSTM</code> layer in the Q-network to process timesteps of experience than just a single timestep. The advantage of these models is that they can hangle <code class="highlighter-rouge">Partially Observable Markov Decision Processes</code> as well.</p>
+
+<h3 id="alright-show-me-the-results">Alright, show me the results!</h3>
+
+<p><img src="./GSoC_Summary_files/cartpole.gif" alt="Cartpole">
+<img src="./GSoC_Summary_files/pendulum.gif" alt="Pendulum"></p>
+
+<h3 id="what-has-been-achieved-1">What has been achieved</h3>
+<ul>
+  <li><code class="highlighter-rouge">PPO</code> and <code class="highlighter-rouge">TRPO</code> trained on <code class="highlighter-rouge">Pendulum-v0</code> and <code class="highlighter-rouge">CartPole-v0</code>. [<b>Note : </b><code class="highlighter-rouge">TRPO</code> was’nt trained on <code class="highlighter-rouge">CartPole-v0</code> as nested AD is currently not supported for <code class="highlighter-rouge">softmax</code> which is used for this environment and in <code class="highlighter-rouge">TRPO</code>]</li>
+  <li>A package along the lines of <code class="highlighter-rouge">openai-baselines</code> for the model-zoo [<a href="https://github.com/FluxML/model-zoo/pull/158">#158</a>]</li>
+</ul>
+
+<h3 id="what-hasnt-been-achieved-1">What has’nt been achieved</h3>
+<ul>
+  <li>Proper convergence of training on <code class="highlighter-rouge">Deep-Recurrent-Q-Networks</code></li>
+</ul>
+
+<h3 id="future-work-1">Future work</h3>
+<p>With the <code class="highlighter-rouge">Arcade Learning Environment</code> being setup, it would be good to try out the models on those environments and obtain a few benchmarks with <code class="highlighter-rouge">Flux</code></p>
+
+<h1 id="the-image-captioning-network">The Image Captioning Network</h1>
+<p>Coming to the final leg of my proposal, the idea was to impelement the paper <a href="https://arxiv.org/abs/1411.4555">Show and Tell</a>.</p>
+
+<p>The idea is pretty straightforward. Given an image, we extract features using a pre-trained CNN like <code class="highlighter-rouge">VGG19</code> and cache them for efficiency. This is used as an input to a <code class="highlighter-rouge">LSTM</code> cell which further gets the subsequent caption words and learns to predict, sequence-wise, the next word in the caption. The training was done on the <code class="highlighter-rouge">MSCOCO</code> dataset. Overall, results were average, and can be found in the <code class="highlighter-rouge">Test.ipynb</code> jupyter notebook <a href="https://github.com/shreyas-kowshik/Image-Captioning.jl/blob/master/src/Test.ipynb">here</a>.</p>
+
+<p>
+    <img src="./GSoC_Summary_files/imgcap_arch.png" alt="imgcap_arch" width="700">
+    <br>
+    </p><center><em>Neural Image Captioning Architecture (Image taken from the paper)</em></center>
+<p></p>
+
+<h3 id="lets-describe-some-images">Let’s describe some images</h3>
+
+<p>Here is the output of the network on random images from the internet :</p>
+
+<p>
+    <img src="./GSoC_Summary_files/imgcap_1.png" alt="imgcap_1">
+    <br>
+    <em>A young man is walking his bicycle across the street</em>
+</p>
+
+<p>
+    <img src="./GSoC_Summary_files/imgcap_2.png" alt="imgcap_2">
+    <br>
+    <em>A kitchen with a sink and a refrigerator</em>
+</p>
+
+<p>
+    <img src="./GSoC_Summary_files/imgcap_3.png" alt="imgcap_3">
+    <br>
+    <em>A group of men with his cap next to a woman in a kitchen</em>
+</p>
+
+<h3 id="what-has-been-achieved-2">What has been achieved</h3>
+<ul>
+  <li>Model trained on <code class="highlighter-rouge">30000</code> captions of the <code class="highlighter-rouge">MSCOCO</code> dataset. Work is to be added to the model-zoo with the reference to <a href="https://github.com/FluxML/model-zoo/pull/159">this PR</a>.</li>
+</ul>
+
+<h3 id="future-work-2">Future work</h3>
+<ul>
+  <li>Add attention to the captioning network</li>
+  <li>Train the network on a greater number of captions</li>
+</ul>
+
+<p>The code and the results are available <a href="https://github.com/shreyas-kowshik/Image-Captioning.jl">here</a>.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Summarsing the past three months, it was indeed a great learning experience. I got to learn by implementing actual code and training complex RL-Agents from scratch, something I had never done before. It was filled with reading papers, some advanced math and trying to put it all into code. The community was equally helping and supportive at all times and I am really thankful to my mentors Dhairya Gandhi, Elliot Saba and Deepak Suresh, fellow GSoC/JSoC students especially Manjunat Bhat, Ayush Kaushal and Tejan Karmali and the entire Julia community for providing me with an invaluable experience over the summer. I look forward to contribute to the community in the coming times and will do justice to my love for open-source.</p>
+
+	</div>
+  </div>
+</article>
+
+<!-- tags do not look great like this
+
+  <div class="blog-tags">
+	  Tags: machine-learning, generative-models, reinforcement-learning
+  </div>
+
+-->
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      <!-- <li class="previous">
+        <a href="https://shreyas-kowshik.github.io/blog/2019/07/21/phase-two.html" data-toggle="tooltip" data-placement="top" title="End of phase two">← Previous Post</a>
+      </li> -->
+      
+      
+    </ul>
+  </div>
+</div>
+
+
+<div class="row disqus-comments">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    var disqus_shortname = '';
+	    // ensure that pages with query string get the same discussion
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];	    
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+  </div>
+</div>
+
+
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/shreyas-kowshik" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+          <li>
+            <a href="mailto:shreyas-kowshik" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		  
+		  
+		  		  
+        </ul>
+        <p class="copyright text-muted">
+		  Shreyas Kowshik
+		  &nbsp;•&nbsp;
+		  2019
+		  
+		  
+	    </p>
+		<p class="theme-by text-muted">
+		  Theme by
+		  <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a>
+		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    <!-- everything has to be repeated twice because on 2016-02-01 GitHub pages migrated to jekyll 3; see bug https://github.com/jekyll/jekyll/issues/4439 -->
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script><script src="./GSoC_Summary_files/jquery-1.11.2.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="./GSoC_Summary_files/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="./GSoC_Summary_files/main.js"></script>
+    
+  
+
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-10655517-6', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+  
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

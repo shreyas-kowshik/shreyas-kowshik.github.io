@@ -1,3 +1,6 @@
-Shreyas Kowshik's personal web site at [http://shreyas-kowshik.github.io/](http://shreyas-kowshik.github.io/).
+# Webpage
 
-The site uses the [Beautiful Jekyll](http://deanattali.com/beautiful-jekyll) theme provided by Dean Attali.
+This repository contains the template for my webpage which could be accessed here - 
+https://jianvora.github.io. Currently under development.
+
+Template credits - https://github.com/jonbarron/website
